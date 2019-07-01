@@ -9,6 +9,8 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light
         a.nav-link(href='/') Home
       li.nav-item
         a.nav-link(href='/about') About
+      li.nav-item
+        a.nav-link(href='/contact') Contact
       if isAuthenticated
         li.nav-item.dropdown
           a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Musics
@@ -21,15 +23,16 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light
           .dropdown-menu
             a.dropdown-item(href='/artists') Artists
             a.dropdown-item(href='/artists/new') New Artist
-        li.nav-item
+        li.nav-item.navbar-right
           form.nav-destroy(action=`/logout`, method="POST")
             input.destroy(type="submit", value="Logout")
 
       if !isAuthenticated
+      
+      ul.navbar-nav.mr-auto.navbar-right
         li.nav-item
           a.nav-link(href='/authors/new') Register
-        li.nav-item
+        li.nav-item.navbar-right
           a.nav-link(href='/login') Login
       
-      li.nav-item
-        a.nav-link(href='/contact') Contact
+      
