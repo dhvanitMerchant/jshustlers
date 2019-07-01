@@ -1,0 +1,15 @@
+form(action=(artist ? "/artists/update" : "/artists"), method="POST")
+  if artist
+    input(type="hidden", name="id", value=artist.id)
+
+  .form-group
+    label Name
+    input.form-control(name="artist[name]", required, value=(artist ? artist.name : null))
+
+  .form-group
+    label Artist Year
+    input.form-control(name="artist[year]", required, value=(artist ? artist.year : null))
+
+  
+  .form-group
+    button.btn.btn-dark(type="submit") Submit

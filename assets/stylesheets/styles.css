@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+
+
+#body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+#header {
+
+  height: 150px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: Montserrat;
+  text-align: center;
+  position: relative;
+  top: 0px; left: 0px;
+  z-index: 1;
+  font-size: 50px;
+ 
+}
+
+#title {
+  height: 100px;
+  width: 100%;
+  font-family: Montserrat;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 30px;
+  font-style: bold;
+  
+}
+
+ 
+#image-links img {
+  height: 150px;
+  width: 150px;
+  margin-top: 50px;
+  margin-left: 270px;
+}
+
+
+
+#table {
+  width: 300px;
+  margin-top: 70px;
+  margin-left: 540px;
+  padding: 15px;
+  text-align: center;
+  border-collapse: collapse;
+  border: 5px solid gray;
+}
+  
+#help-box {
+  height: 50px;
+  width: 80px;
+  text-align: center;
+  background-color: #000;
+  color: #E0F7FA;
+  font-family: Montserrat;
+  position: fixed;
+  bottom: 5%;
+  right: 0px; 
+}
+
+#footer {
+  height: 50px;
+  border-top: solid 1px #000;
+  background-color: #000;
+  text-align: center;
+  color: white;
+  font-family: Montserrat;   
+}
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#backToHome{
+  margin: 4px 2px;
+  text-decoration: none;
+  color: black;
+  
+  display: inline-block;
+ 
+  padding: 0 3px;
+  box-sizing: border-box;
+}
+#backToHome:hover{
+ 
+  border: none;
+  box-shadow: inset 0 -55px 0 0 black;
+  color: #fff;
+}
+
+.row{
+
+display: flex;
+justify-content: center;
+align-content:space-between;
+margin-left: 30px;
+
+}
+
+
+.col-2{
+  margin-left:460px;
+  order: 1;
+}
+
+.link :hover{
+color: white;
+
+}
+
+.destroy {
+  display: inline;
+}
+
+.destroy>input[type="submit"] {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: #007bff;
+}
+
+.destroy:hover>input[type="submit"] {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.flash {
+  margin-top: 60px;
+}
+
+.nav-destroy>input[type="submit"] {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: rgba(0, 0, 0, .5);
+  display: block;
+  padding: .5rem 0.5rem;
+}
+
+@media (min-width: 992px) .nav-destroy>input[type="submit"] {
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+
+.nav-destroy:hover>input[type="submit"] {
+  color: rgba(0, 0, 0, .7);
+}

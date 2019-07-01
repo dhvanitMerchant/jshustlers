@@ -1,0 +1,32 @@
+extends ../layouts/main.pug
+
+block content
+  .container
+    header
+      h1= title
+
+    div
+      table.table.table-striped
+        thead
+          tr
+            th Name
+            th Artist Year
+            th Actions
+        
+        tbody
+          each artist in artists
+            tr
+              td
+                a(href=`/artists/${artist.id}`)= artist.name
+              td= artist.year
+              td
+                a(href=`/artists/${artist.id}/edit`) 
+                 button.btn.btn-outline-primary(type='button') Edit
+
+                = "  "
+                form.destroy(action="/artists/destroy", method="POST", onsubmit='return confirm("Are you sure? You want to delete this Artist?");')
+                  input(type="hidden", name="id", value=artist.id)
+                  button.btn.btn-outline-danger(type="submit", value="delete") Delete
+                  
+
+      a(href='/artists/new') New Artist

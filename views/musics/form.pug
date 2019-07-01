@@ -1,0 +1,29 @@
+form(action=(music ? "/musics/update" : "/musics"), method="POST")
+  if music
+    input(type="hidden", name="id", value=music.id)
+
+  .form-group
+    label Title
+    input.form-control(name="music[title]", required, value=(music ? music.title : null))
+
+  .form-group
+    label Content
+    textarea.form-control(name="music[content]")
+      = music ? music.content : null
+
+  .form-group
+    label artist Name
+    select.form-control(name="music[artist]", required)
+      each artist in artists
+        option(value=artist._id, selected=(music && music.artist.id === artist.id))
+          = artist.name
+
+  .form-group
+    label Category
+    select.form-control(name="music[category]", required)
+      each category in ['JAZZ', 'ROCK', 'COUNTRY']
+        option(value=category, selected=(music && music.category === category))
+          = category.toLowerCase()
+  
+  .form-group
+    button.btn.btn-dark(type="submit") Submit
